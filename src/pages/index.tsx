@@ -38,6 +38,7 @@ export default function Home() {
       <Flex
         w="100vw"
         h="100%"
+        minH="100vh"
         //  bgImage="url(bg.jpg)"
         // bgImage={`url(bgPattern.svg)`}
         bg="#272a30"
