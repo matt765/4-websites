@@ -47,8 +47,7 @@ export default function Home() {
         bgSize="cover"
         justify="center"
         alignItems="center"
-    
-        p={{ base: "1.5rem", '2xl': "1rem"}}
+        p={{ base: "1.5rem", "2xl": "1rem" }}
         // bgGradient=" linear-gradient(40deg, rgba(41,44,51,1) 25%, rgba(39,42,48,1) 100%)"
       >
         <Flex
@@ -57,7 +56,7 @@ export default function Home() {
           wrap="wrap"
           justify="center"
           alignItems="center"
-          gap={{ base: "1.6rem", '2xl': "2rem" }}
+          gap={{ base: "1.6rem", "2xl": "2rem" }}
         >
           <WebsiteBox
             title="Tailcast"
@@ -85,7 +84,7 @@ export default function Home() {
           />
           <WebsiteBox
             title="PaySafeNow"
-            desc="Example of a website for a startup that offers safe online payment solutions"
+            desc="Example of a website template for a startup that offers safe online payment solutions"
             techStack="Webflow"
             liveLink="https://paysafenow.webflow.io/"
             image={CoinstackImage}
@@ -93,29 +92,21 @@ export default function Home() {
         </Flex>
       </Flex>
       <Navigation />
-
-      <Flex
-        width="100%"
+      <Link
+        href="https://github.com/matt765/4-websites"
+        isExternal
+        width="3rem"
+        fill="rgb(255,255,255,0.4)"
+        _hover={{ fill: "rgb(255,255,255,0.9)" }}
+        transition="0.3s"
         position="fixed"
         bottom="2rem"
-        justify="flex-end"
-        alignItems="center"
-        zIndex="99"
+        right="2rem"
       >
-        <Link
-          href="https://github.com/matt765"
-          isExternal
-          width="3rem"
-          fill="rgb(255,255,255,0.4)"
-          _hover={{ fill: "rgb(255,255,255,0.9)" }}
-          transition="0.3s"
-          mr="2rem"
-        >
-          <Flex width="3rem">
-            <Icon as={GithubIcon} />
-          </Flex>
-        </Link>
-      </Flex>
+        <Flex width="3rem">
+          <Icon as={GithubIcon} />
+        </Flex>
+      </Link>
     </>
   );
 }
