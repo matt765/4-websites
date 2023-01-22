@@ -47,16 +47,17 @@ export default function Home() {
         bgSize="cover"
         justify="center"
         alignItems="center"
-        p="2rem"
+    
+        p={{ base: "1.5rem", '2xl': "1rem"}}
         // bgGradient=" linear-gradient(40deg, rgba(41,44,51,1) 25%, rgba(39,42,48,1) 100%)"
       >
         <Flex
-          w="1500px"
+          w="100%"
           h="80%"
           wrap="wrap"
           justify="center"
           alignItems="center"
-          gap="1rem"
+          gap={{ base: "1.6rem", '2xl': "2rem" }}
         >
           <WebsiteBox
             title="Tailcast"
