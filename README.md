@@ -1,6 +1,6 @@
 # 4 websites
 
-Simple portfolio application that I made to display websites I've created. 
+Simple portfolio application for displaying websites I've created.
 
 ## Tech stack:
 

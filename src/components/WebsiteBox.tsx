@@ -9,6 +9,7 @@ interface WebsiteBoxProps {
   codeLink?: string;
   image: StaticImageData;
   previewLink?: string;
+  isLight?: boolean;
 }
 
 export const WebsiteBox = ({
@@ -19,57 +20,93 @@ export const WebsiteBox = ({
   codeLink,
   image,
   previewLink,
+  isLight,
 }: WebsiteBoxProps) => {
   return (
     <Flex
-      w={{ base: "100%", sm: "40rem", "2xl": "45rem" }}
-      h={{ base: "auto", md: "17.5rem", "2xl": "19rem" }}
+      maxW={{ base: "100%", sm: "40rem", "2xl": "670px" }}
+      h={{ base: "auto", md: "17.5rem", "2xl": "18.5rem" }}
       borderWidth="1px"
       borderStyle="solid"
-      borderColor="#444850"
-      borderRadius="10px"
-      bg="#32363e"
-      pr={{ base: "1rem", '2xl': "1.7rem" }}
-      pl={{ base: "1.5rem", '2xl': "1.8rem" }}
-      pt={{ base: "1.5rem", '2xl': "1.8rem" }}
-      padding={{ base: "1.5rem", sm: "2.5rem", 'md': "1.8rem" }}
+      borderColor="grayBorder"
+      borderRadius="15px"
+      bg="primaryBg"
+      pr={{ base: "1rem", "2xl": "1.3vw" }}
+      pl={{ base: "1.5rem", "2xl": "1.8rem" }}
+      pt={{ base: "1.5rem", "2xl": "1.5vw" }}
+      pb={{ base: "1.5rem", "2xl": "1.8rem" }}
+      padding={{ base: "1.5rem", sm: "2.5rem", md: "1.8rem" }}
       fontFamily="Montserrat"
-      direction={{ base: "column", "md": "row" }}
+      direction={{ base: "column", md: "row" }}
     >
       <Flex
-        w={{ base: "100%", "sm": "375px" }}
-        maxH={{ base: "600px", md: "155px", "2xl": "210px" }}
-        minW={{ base: "100%", md: "265px",  "2xl": "345px" }}
+        w={{ base: "100%", sm: "375px" }}
+        maxH={{ base: "600px", md: "155px", "2xl": "11.5rem" }}
+        minW={{ base: "100%", md: "265px", "2xl": "50%" }}
         borderStyle="solid"
         borderWidth="1px"
-        borderColor="#444850"
+        borderColor="grayBorder"
         borderRadius="6px"
         overflow="hidden"
         mb={{ base: "1.5rem", md: "0" }}
+        cursor="pointer"
+        position="relative"
+        bg="rgb(255,255,255,0)"
+        transition="0.3s"
+        sx={{
+          "&:hover": {
+            transform: "scale(1.04)",
+          },
+          "& a:hover": {
+            opacity: "1",
+          },
+        }}
       >
         <Image src={image} alt="" />
+        <Link
+          position="absolute"
+          top="0"
+          left="0"
+          w="100%"
+          h="100%"
+          backgroundColor={
+            isLight ? "rgb(49, 151, 149, 0.1)" : "rgb(255,255,255,0.05)"
+          }
+          opacity="0"
+          transition="0.2s"
+          href={liveLink}
+          isExternal
+        />
       </Flex>
       <Flex direction="column" pl={{ base: "0.2rem", md: "1.5rem" }}>
-        <Flex color="white" fontSize={{ base: "2.2rem", md: "1.8rem", '2xl': "2rem" }} fontWeight="500" alignItems="flex-start" 
-        
-        mt={{ base: "-0.4rem", '2xl': "0"}}>
+        <Flex
+          color="titleColor"
+          fontSize={{ base: "2.2rem", md: "1.8rem", "2xl": "2rem" }}
+          fontWeight="500"
+          alignItems="flex-start"
+          mt={{ base: "-0.4rem", "2xl": "0" }}
+        >
           {title}
         </Flex>
-        <Flex color="white" mt="0.5rem">
+        <Flex color="primaryText" mt="0.5rem">
           {desc}
         </Flex>
-        <Flex color="rgb(255,255,255,0.7)" mt="0.7rem" fontSize={{ base: "0.9rem", '2xl': "1rem"}}>
+        <Flex
+          color="secondaryText"
+          mt="0.7rem"
+          fontSize={{ base: "0.9rem", "2xl": "1rem" }}
+        >
           {techStack}
         </Flex>
         <Flex gap="1.2rem" mt="1.3rem">
           <Link
-            w="8rem"
+            w={{ base: "8rem", "2xl": "49%" }}
             h="2.5rem"
-            bg="rgb(49, 151, 149)"
+            bg="coloredButton"
             href={liveLink}
             borderRadius="5px"
             textDecoration="none"
-            _hover={{ bg: "#257472" }}
+            _hover={{ bg: "coloredButtonHover" }}
             transition="0.2s"
             isExternal
           >
@@ -88,13 +125,15 @@ export const WebsiteBox = ({
           </Link>
           {(codeLink || previewLink) && (
             <Link
-              w="8rem"
+              w={{ base: "8rem", "2xl": "49%" }}
               h="2.5rem"
-              bg="rgba(45, 53, 80, 0)"
+              bg="transparentButton"
               href={codeLink ? codeLink : previewLink}
               borderRadius="5px"
-              border="1px solid rgb(62, 121, 130)"
-              _hover={{ bg: "rgb(255,255,255,0.05)" }}
+              borderWidth="1px"
+              borderStyle="solid"
+              borderColor="coloredButton"
+              _hover={{ bg: "transparentButtonHover" }}
               transition="0.2s"
               isExternal
             >
@@ -103,7 +142,7 @@ export const WebsiteBox = ({
                 h="100%"
                 justify="center"
                 alignItems="center"
-                color="white"
+                color="primaryText"
                 fontWeight="500"
                 fontSize="0.9rem"
               >
