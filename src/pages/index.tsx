@@ -76,11 +76,11 @@ const projectsData = [
   },
   {
     title: "InnoVate",
-    desc: "Website for interior design company, created using client-first design rules rules",
+    desc: "Website for interior design company, created using client-first design rules",
     techStack: "Webflow",
     liveLink: "https://innovate-interior.webflow.io/",
     previewLink:
-      "https://preview.webflow.com/preview/innovate-interior?utm_medium=preview_link&utm_source=designer&utm_content=innovate-interior&preview: a7b8553f8c91a11c0d12c3876699a7a4&workflow=preview",
+      "https://preview.webflow.com/preview/innovate-interior?utm_medium=preview_link&utm_source=designer&utm_content=innovate-interior&preview=a7b8553f8c91a11c0d12c3876699a7a4&workflow=preview",
     image: InnovateImage,
   },
   {
