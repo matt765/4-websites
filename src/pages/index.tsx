@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Flex, useColorMode } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import { SideBar } from "@/components/SideBar";
 import { WebsiteBox } from "@/components/WebsiteBox";
@@ -54,8 +55,15 @@ export default function Home() {
           px="2vw"
         >
           <SideBar toggleColorMode={toggleColorMode} />
-          {projectsData.map((project, key) => (
-            <WebsiteBox {...project} key={project.title} />
+          {projectsData.map((project, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={project.title}
+            >
+              <WebsiteBox {...project} />
+            </motion.div>
           ))}
         </Flex>
       </Flex>
