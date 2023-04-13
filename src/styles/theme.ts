@@ -7,6 +7,16 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
+  breakpoints: {
+    sm: "30em", // 480px
+    md: "48em", // 768px
+    lg: "62em", // 992px
+    xl: "80em", // 1280px
+    "1xl": "87.5em", // 1400px
+    "2xl": "96em", // 1536px
+    "3xl": "100em", // 1600px
+    "4xl": "106.25em", // 1700px
+  },
   semanticTokens: {
     colors: {
       primaryBg: {
@@ -51,6 +61,10 @@ const theme = extendTheme({
       },
       githubIcon: {
         default: "rgb(255,255,255,0.9)",
+        _dark: "rgb(255,255,255,0.4)",
+      },
+      colorTogglerBorder: {
+        default: "rgb(255,255,255,0.7)",
         _dark: "rgb(255,255,255,0.4)",
       },
     },

@@ -11,26 +11,20 @@ import FoodhubImage from "../assets/images/foodhub.png";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
       <Head>
-        <title>WebDev Portfolio</title>
+        <title>Portfolio</title>
         <meta
           name="description"
-          content="Simple portfolio application for displaying websites  that I've created."
+          content="Simple portfolio application for displaying websites that I've created."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+    
       </Head>
       <Flex
         w="100vw"
@@ -41,31 +35,48 @@ export default function Home() {
         bgPosition="center"
         bgRepeat="no-repeat"
         bgSize="cover"
-        justify="center"
+        bgAttachment="fixed"
+        justify={{ base: "center", "4xl": "center" }}
         alignItems="center"
-        p={{ base: "1.5rem", "2xl": "1rem" }}
+        direction="column"
+        pt={{ base: "1.5rem", xl: "0rem", "1xl": "0vw", "4xl": "0rem" }}
+        px={{ base: "1rem", md: "0rem" }}
+        pb={{
+          base: "1.5rem",
+          xl: "0rem",
+          "2xl": "0rem",
+          "3xl": "0rem",
+          "4xl": "0rem",
+        }}
       >
         <Flex
-          w="100%"
+          w={{ base: "auto", sm: "100%" }}
           h="80%"
           wrap="wrap"
           justify="center"
           alignItems="center"
           gap={{ base: "1.6rem", "2xl": "2rem" }}
           px="2vw"
+          direction={{ base: "column", xl: "row" }}
         >
-          <SideBar toggleColorMode={toggleColorMode} />
           {projectsData.map((project, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.15 }}
               key={project.title}
             >
               <WebsiteBox {...project} />
             </motion.div>
           ))}
         </Flex>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.7 }}
+        >
+          <SideBar toggleColorMode={toggleColorMode} />{" "}
+        </motion.div>
       </Flex>
     </>
   );
@@ -82,9 +93,9 @@ const projectsData = [
   },
   {
     title: "InnoVate",
-    desc: "Website for interior design company, created using client-first design rules",
+    desc: "Website for modern interior design company, created using client-first design rules",
     techStack: "Webflow",
-    liveLink: "https://innovate-interior.webflow.io/",
+    liveLink: "https://innovate-interior.vercel.app/",
     previewLink:
       "https://preview.webflow.com/preview/innovate-interior?utm_medium=preview_link&utm_source=designer&utm_content=innovate-interior&preview=a7b8553f8c91a11c0d12c3876699a7a4&workflow=preview",
     image: InnovateImage,
@@ -100,7 +111,7 @@ const projectsData = [
     title: "PaySafeNow",
     desc: "Example of a website template for a startup that offers safe online payment solutions",
     techStack: "Webflow",
-    liveLink: "https://paysafenow.webflow.io/",
+    liveLink: "https://paysafenow.vercel.app/",
     image: CoinstackImage,
     isLight: true,
   },

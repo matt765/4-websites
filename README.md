@@ -4,7 +4,7 @@ Simple portfolio application for displaying websites I've created.
 
 ## Tech stack:
 
-NextJS, TypeScript, ChakraUI
+NextJS, TypeScript, ChakraUI, Framer Motion
 
 ## Live link
 [https://4-websites.vercel.app/](https://4-websites.vercel.app/)
