@@ -3,13 +3,3 @@
   padding: 0;
   margin: 0;
 }
-body,
-html {
-  background-color: #272a30;
-}
-@media (min-width: 1400px) {
-  body,
-  html {
-    overflow: hidden;
-  }
-}

@@ -1,0 +1,198 @@
+/* Main Swiper styles */
+
+.swiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mySwiper {
+  text-align: center;
+  font-size: 1.125rem;
+  width: 83rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  .mySwiper {
+    width: 70rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .mySwiper {
+    width: 67rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mySwiper {
+    height: 100%;
+  }
+}
+
+/* Swiper slide */
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .swiper-slide {
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 4%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .swiper-slide {
+    padding-top: 4rem;
+  }
+}
+.motion-div {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media only screen and (max-width: 1024px) {
+  .motion-div {
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto !important;
+  }
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Swiper next and prev buttons */
+
+.swiper-button-prev {
+  position: fixed !important;
+  left: 2rem !important;
+}
+
+@media only screen and (max-width: 1280px) {
+  .swiper-button-prev {
+    left: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+.swiper-button-next {
+  position: fixed !important;
+  right: 2rem !important;
+}
+
+@media only screen and (max-width: 1280px) {
+  .swiper-button-next {
+    right: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: rgb(255, 255, 255, 0.9) !important;
+}
+
+/* Swiper pagination */
+
+.swiper-pagination-bullet {
+  width: 3rem !important;
+  height: 3rem !important;
+  background-image: url("../assets/images/tailcast.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  background-position: center !important;
+  opacity: 0.5 !important;
+  background-color: rgb(0, 0, 0, 0) !important;
+  margin-bottom: 0.5rem !important;
+  margin-left: 1rem !important;
+  transition: 0.2s;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 3rem !important;
+  height: 3rem !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination > :nth-child(3) {
+  background-image: url("../assets/images/tailcast-logo.png") !important;
+}
+
+.swiper-pagination > :nth-child(1) {
+  background-image: url("../assets/images/paysafenow-logo.png") !important;
+}
+
+.swiper-pagination > :nth-child(4) {
+  background-image: url("../assets/images/greenhub.svg") !important;
+}
+
+.swiper-pagination > :nth-child(2) {
+  background-image: url("../assets/images/innovate-logo.png") !important;
+}
+
+.swiper-pagination {
+  background-color: #393c42;
+  max-width: 18rem;
+  margin-left: auto;
+  padding-top: 0.5rem;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+  border-radius: 15px;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: 3rem !important;
+  border: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 1280px) {
+  .swiper-pagination {
+    bottom: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .swiper-pagination {
+    max-width: 100%;
+    width: 100%;
+    bottom: unset !important;
+    left: 51% !important;
+    top: 0 !important;
+    transform: translateX(-51%) !important;
+    border-radius: 0px;
+  }
+}
