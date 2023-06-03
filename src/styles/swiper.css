@@ -83,12 +83,17 @@
 
 .swiper-button-prev {
   position: fixed !important;
-  left: 2rem !important;
+  left: 8vw !important;
+  padding-bottom: 3rem !important;
 }
-
+@media only screen and (max-width: 1750px) {
+  .swiper-button-prev {
+    left: 5vw !important;
+  }
+}
 @media only screen and (max-width: 1280px) {
   .swiper-button-prev {
-    left: 0.5rem !important;
+    left: 1rem !important;
   }
 }
 
@@ -100,12 +105,19 @@
 
 .swiper-button-next {
   position: fixed !important;
-  right: 2rem !important;
+  right: 8vw !important;
+  padding-bottom: 3rem !important;
+}
+
+@media only screen and (max-width: 1750px) {
+  .swiper-button-next {
+    right: 5vw !important;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
   .swiper-button-next {
-    right: 0.5rem !important;
+    right: 1rem !important;
   }
 }
 
@@ -177,6 +189,12 @@
   transform: translateX(-50%) !important;
   bottom: 3rem !important;
   border: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 1650px) {
+  .swiper-pagination {
+    bottom: 2rem !important;
+  }
 }
 
 @media only screen and (max-width: 1280px) {

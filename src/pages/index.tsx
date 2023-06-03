@@ -49,13 +49,12 @@ const AppContainer = styled.div`
 const CentralBox = styled.div`
   display: flex;
   max-width: 100%;
-  border-radius: 25px;
   padding: 3rem;
   font-family: "Exo 2", sans-serif;
   display: flex;
   color: white;
   justify-content: space-between;
-  width: 83rem;
+  width: 100%;
   height: 65%;
   align-items: center;
   padding-top: 0rem;
@@ -70,15 +69,12 @@ const CentralBox = styled.div`
   background-color: #393c42;
 
   @media ${devices.max1600} {
-    width: 70rem;
-    height: 64%;
+      height: 64%;
   }
   @media ${devices.max1400} {
-    width: 67rem;
     height: 62%;
   }
   @media ${devices.max1280} {
-    width: 100%;
     height: 62%;
     border-radius: 0px;
   }
