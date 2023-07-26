@@ -68,7 +68,7 @@ export const BgPattern = () => (
       <use x="150" y="270" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="150" y="330" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="150" y="390" stroke="rgba(99, 99, 101, 1)"></use>
-      <use x="150" y="450" stroke="rgba(99, 99, 101, 1)" stroke-width="3"></use>
+      <use x="150" y="450" stroke="rgba(99, 99, 101, 1)" strokeWidth="3"></use>
       <use x="150" y="510" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="150" y="570" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="150" y="630" stroke="rgba(99, 99, 101, 1)"></use>
@@ -86,7 +86,7 @@ export const BgPattern = () => (
       <use x="210" y="630" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="210" y="690" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="270" y="30" stroke="rgba(99, 99, 101, 1)"></use>
-      <use x="270" y="90" stroke="rgba(99, 99, 101, 1)" stroke-width="3"></use>
+      <use x="270" y="90" stroke="rgba(99, 99, 101, 1)" strokeWidth="3"></use>
       <use x="270" y="150" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="270" y="210" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="270" y="270" stroke="rgba(99, 99, 101, 1)"></use>
@@ -114,7 +114,7 @@ export const BgPattern = () => (
       <use x="390" y="150" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="390" y="210" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="390" y="270" stroke="rgba(99, 99, 101, 1)"></use>
-      <use x="390" y="330" stroke="rgba(99, 99, 101, 1)" stroke-width="3"></use>
+      <use x="390" y="330" stroke="rgba(99, 99, 101, 1)" strokeWidth="3"></use>
       <use x="390" y="390" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="390" y="450" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="390" y="510" stroke="rgba(99, 99, 101, 1)"></use>
@@ -137,7 +137,7 @@ export const BgPattern = () => (
       <use x="510" y="90" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="510" y="150" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="510" y="210" stroke="rgba(99, 99, 101, 1)"></use>
-      <use x="510" y="270" stroke="rgba(99, 99, 101, 1)" stroke-width="3"></use>
+      <use x="510" y="270" stroke="rgba(99, 99, 101, 1)" strokeWidth="3"></use>
       <use x="510" y="330" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="510" y="390" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="510" y="450" stroke="rgba(99, 99, 101, 1)"></use>
@@ -151,7 +151,7 @@ export const BgPattern = () => (
       <use x="570" y="210" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="570" y="270" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="570" y="330" stroke="rgba(99, 99, 101, 1)"></use>
-      <use x="570" y="390" stroke="rgba(99, 99, 101, 1)" stroke-width="3"></use>
+      <use x="570" y="390" stroke="rgba(99, 99, 101, 1)" strokeWidth="3"></use>
       <use x="570" y="450" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="570" y="510" stroke="rgba(99, 99, 101, 1)"></use>
       <use x="570" y="570" stroke="rgba(99, 99, 101, 1)"></use>

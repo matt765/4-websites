@@ -1,11 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
 import styled from "styled-components";
+import Head from "next/head";
 
-import { Carousel } from "../components/Carousel";
 import { SideButtons } from "@/components/SideButtons";
 import { devices } from "@/styles/breakpoints";
-import Head from "next/head";
+import { WebsiteBox } from "@/components/WebsiteBox";
+import { projectsData } from "@/data/projectsData";
 
 export default function Home() {
   return (
@@ -20,8 +20,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppContainer>
-        <Carousel />
-        <CentralBox />
+        <WebsitesArea>
+          {projectsData.map((project, index) => (
+            <WebsiteBox key={index} id={index} {...project} />
+          ))}
+        </WebsitesArea>
         <SideButtons />
       </AppContainer>
     </>
@@ -32,53 +35,56 @@ const AppContainer = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  padding-right: 0.5rem;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   font-family: "Jost", sans-serif;
-  background-image: url(pattern.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 0rem;
-  background-color: #2c2f35;
-
+  background: radial-gradient(
+      at 49% 80%,
+      hsla(226, 10%, 24%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 66% 49%, hsla(226, 10%, 24%, 1) 0px, transparent 50%),
+    radial-gradient(at 29% 49%, hsla(226, 10%, 24%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 22%, hsla(226, 10%, 24%, 1) 0px, transparent 50%);
+  background-color: hsla(220, 4%, 14%, 1);
   @media ${devices.max1024} {
     background-image: none;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    position: relative;
   }
 `;
 
-const CentralBox = styled.div`
+const WebsitesArea = styled.div`
+  width: 87rem;
   display: flex;
-  max-width: 100%;
-  padding: 3rem;
-  font-family: "Exo 2", sans-serif;
-  display: flex;
-  color: white;
-  justify-content: space-between;
-  width: 100%;
-  height: 65%;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
   align-items: center;
-  padding-top: 0rem;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(255, 255, 255, 0.2);
-  padding-top: 2rem;
-  position: fixed;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #393c42;
-
   @media ${devices.max1600} {
-      height: 64%;
+    width: 68rem;
   }
   @media ${devices.max1400} {
-    height: 62%;
-  }
-  @media ${devices.max1280} {
-    height: 62%;
-    border-radius: 0px;
+    width: 62rem;
+    gap: 3rem;
   }
   @media ${devices.max1024} {
-    display: none;
+    flex-direction: column;
+    width: 30rem;
+    gap: unset;
+  }
+  @media ${devices.max640} {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 `;
