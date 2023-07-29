@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
 
-import { SideButtons } from "@/components/SideButtons";
+import { SideButtons } from "@/components/sideButtons/SideButtons";
 import { devices } from "@/styles/breakpoints";
-import { WebsiteBox } from "@/components/WebsiteBox";
+import { WebsiteBox } from "@/components/websiteBox/WebsiteBox";
 import { projectsData } from "@/data/projectsData";
 
 export default function Home() {
